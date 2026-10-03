@@ -67,7 +67,7 @@ jobs:
       - name: Verify the signature of the published Docker image
         env:
           IMAGE: ghcr.io/${{ env.IMAGE_OWNER }}/${{ env.IMAGE_REPO }}
-          IDENTITY: "https://github.com/${{ env.IMAGE_OWNER }}/${{ env.IMAGE_REPO }}/.github/workflows/release.yml@.*"
+          IDENTITY: "https://github.com/Snoofy26/FlareSolverr/.github/workflows/release.yml@.*"
           OIDC_ISSUER: https://token.actions.githubusercontent.com
         run: |
           cosign verify \
